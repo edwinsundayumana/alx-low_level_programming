@@ -7,18 +7,11 @@
  */
 int main(void)
 {
-int lw = 'a';
-int up = 'A';
-while (lw <= 'z')
-{
-putchar(lw);
-lw += 1;
-}
-while (up <= 'Z')
-}
-putchar(up);
-up += 1;
-}
-putchar('\n);
+char letter;
+for (letter = 'a'; letter <= 'z'; letter++)
+putchar(letter);
+for (letter = 'A'; letter <= 'Z'; letter++)
+putchar(letter);
+putchar('n');
 return (0);
 }
