@@ -18,7 +18,7 @@ for (digit1 = 0; digit1 < 9; digit1++)
 
 		if (digit1 == 8 && digit2 == 9)
 			continue;
-		putchar('.');
+		putchar(',');
 		putchar(' ');
 	}
 }
