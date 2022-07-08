@@ -10,7 +10,7 @@ int main(void)
 {
 	int i;
 
-	printf("Infinite looop incoming : \n");
+	printf("Infinite looop incoming :(\n");
 
 	i = 0;
 	/*
