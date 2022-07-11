@@ -1,11 +1,13 @@
+#include <studio.h>
 #include "main.h"
 
 /**
- * putchar - A function that prints Putchar
- * Return: Always (0)
+ * main - Entry point
+ * Descriptio: write aprogramthat prints"_putchar" followed by a new line
+ * Return: Always 0 (Success.)
  */
 
-void putchar(void)
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
@@ -17,5 +19,5 @@ void putchar(void)
 	_putchar('r');
 	_putchar('\n');
 
-return (0);
+	return (0);
 }
