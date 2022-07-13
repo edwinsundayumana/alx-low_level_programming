@@ -5,15 +5,23 @@
 
 /**
  * main - a program that generates random valid passwords for the program
- * Return: return on success
+ * Decription: Program to randomly generates password
+ * Return: nothing
  */
 
 int main(void)
 {
-	int num;
+	int pass, sum;
 
 	srand(time(0));
-	num = rand();
-	printf("%i\n", num);
+
+	sum = 0;
+	while (sum <= 2645)
+	{
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%c", pass);
+	}
+	printf("%c", 2772 - sum);
 	return (0);
 }
