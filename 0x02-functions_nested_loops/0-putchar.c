@@ -1,10 +1,9 @@
-#include <studio.h>
 #include "main.h"
 
 /**
  * main - Entry point
- * Descriptio: write aprogramthat prints"_putchar" followed by a new line
- * Return: Always 0 (Success.)
+ * Descriptio: write a program that prints"_putchar" followed by a new line
+ * Return: nothing, return void
  */
 
 int main(void)
