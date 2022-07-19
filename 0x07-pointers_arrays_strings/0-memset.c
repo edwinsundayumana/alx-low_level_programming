@@ -5,7 +5,7 @@
  * @s: the pointer block of memory to fill
  * @b: the value to the set
  * @n: the byte of the memory
- * Return: returns dest
+ * Return: dest
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -17,6 +17,6 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		*(s + 1) = b; /*add 1 postion s*/
 	}
-	/*ending for */
+	/*end for*/
 	return (s);
 }
