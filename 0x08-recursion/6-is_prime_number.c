@@ -11,7 +11,7 @@
 int primeNum(int n, int i)
 {
 	if (n % i == 0)
-		return (0)
+		return (0);
 	else if (n >= (i + 1) * (i * 1))
 		return (primeNum(n, i + 1));
 	return (1);
