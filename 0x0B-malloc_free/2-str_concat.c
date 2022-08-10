@@ -1,59 +1,52 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * _strlen - count arrray
- * @s: array of elements
- * Return: i
- */
-
-int _strlen(char *s)
-{
-	unsigned int i;
-
-	i = 0;
-	while (s[i] != '\0') /*Count character of string*/
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * str_concat - back a pointer to array
- * @s1: Array one
- * @s2: Array two
- * Return: Always an aray dinamic
- */
-
+  *str_concat - concatenates 2 strings.
+  * a NULL string is treated as an empty string.
+  *@s1: pointer to string.
+  *@s2: pointer to string.
+  *
+  *Return: pointer to newly allocated memory which
+  *has s1, s2 and null byte.
+  *NULL on failure.
+  */
 char *str_concat(char *s1, char *s2)
 {
-	char *dst;
-	unsigned int i, j, size;
+	unsigned int len1, len2, size, i, j;
+	char *nstr;
 
-	/*If the array is empty*/
 	if (s1 == NULL)
-		s1 == "";
+		s1 = "";
 	if (s2 == NULL)
-		s2 == "";
+		s2 = "";
 
-	/*count size total*/
-	size = (_strlen(s1) + _strlen(s2) + 1);
+	len1 = 0;
+	while (s1[len1] != '\0')
+		len1++;
+	len2 = 0;
+	while (s2[len2] != '\0')
+		len2++;
 
-	/*malloc*/
-	dst = (char *) malloc(size * sizeof(char));
+	size = len1 + len2;
 
-	if (dst == 0)
-	{
+	nstr = malloc((sizeof(char) * size) + 1);
+	/*check if malloc was successful */
+	if (nstr == NULL)
 		return (NULL);
-	}
 
-	/*Concatenante arrays*/
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(dst + i) = *(s1 + i);
-	for (j = 0; *(s2 + j) != '\0'; j++)
+	i = 0;
+	while (i < len1)
 	{
-		*(dst + i) = *(s2 + j);
+		nstr[i] = s1[i];
 		i++;
 	}
-	return (dst);
+	j = 0;
+	while (i <= size)
+	{
+		nstr[i] = s2[j];
+		i++;
+		j++;
+	}
+	return (nstr);
 }
